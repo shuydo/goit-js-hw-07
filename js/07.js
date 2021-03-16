@@ -18,5 +18,5 @@ const span = document.getElementById("text");
 input.addEventListener("input", handleInputRange);
 function handleInputRange(event) {
   span.style.fontSize = 12+event.currentTarget.value/10 + "px";
-  console.log(12+event.currentTarget.value/10 + "px");
+  // console.log(12+event.currentTarget.value/10 + "px");
 }
