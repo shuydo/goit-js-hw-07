@@ -1,6 +1,6 @@
 // Задание 6
 
-// Напиши скрипт, который бы при потере фокуса на инпуте, проверял его 
+// Напиши скрипт, который бы при потере фокуса на инпуте, проверял его
 // содержимое на правильное количество символов.
 
 // <input
@@ -10,7 +10,7 @@
 //   placeholder="Введи 6 символов"
 // />
 
-//     Сколько символов должно быть в инпуте, указывается в его атрибуте 
+//     Сколько символов должно быть в инпуте, указывается в его атрибуте
 // data-length.
 //     Если введено подходящее количество, то border инпута становится
 // зеленым, если неправильное - красным.
@@ -27,28 +27,51 @@
 
 // #validation-input.invalid {
 //   border-color: #f44336;
-
+// ====================================
 const input = document.getElementById("validation-input");
-
-input.addEventListener("focus", onInputFocus);
-input.addEventListener("blur", onInputBlur);
-
-
-function colorizeInputBox(){
-    if (input.textLength >= Number(input.getAttribute("data-length")))
-      input.className = "valid";
-    else input.className = "invalid";}
-
+const colorizeInputBox = () => {
+  if (input.textLength === Number(input.getAttribute("data-length")))
+    input.className = "valid"; else input.className = "invalid"};
+input.addEventListener("blur", colorizeInputBox);
 colorizeInputBox();
+// ====================================
+// const inputRef = document.getElementById("validation-input");
+// const inputLength = inputRef.getAttribute("data-length");
+// console.log(inputRef);
+// console.log(inputLength);
+// inputRef.addEventListener("blur", onInputBlur);
+// function onInputBlur() {
+//   console.log(typeof inputRef.value.length,typeof inputLength,typeof Number(inputLength),'blur func');
+//   if (inputRef.value.length === Number(inputLength)) {
+//     console.log(inputRef.value.length,'valid');
+//     inputRef.classList.add("valid");
+//     inputRef.classList.remove("invalid");
+//   }
+//   if (inputRef.value.length !== Number(inputLength)) {
+//     inputRef.classList.add("invalid");
+//     inputRef.classList.remove("valid");
+//   }
+//   if (inputRef.value.length === 0) {
+//     inputRef.classList.remove("valid");
+//     inputRef.classList.remove("invalid");
+//   }
+// }
+// ====================================
 
-function onInputFocus() {
-  colorizeInputBox();
-}
-function onInputBlur() {
-  colorizeInputBox();
-}
+// input.addEventListener("focus", colorizeInputBox);
+
+// function colorizeInputBox(){
+//     if (input.textLength >= Number(input.getAttribute("data-length")))
+//       input.className = "valid";
+//     else input.className = "invalid";}
+
+// function onInputFocus() {
+//   colorizeInputBox();
+// }
+// function onInputBlur() {
+//   colorizeInputBox();
+// }
 // input.addEventListener("input", onInputChange);
 // function onInputChange(event) {
 //     console.log(event.currentTarget.value);
 //   }
-
