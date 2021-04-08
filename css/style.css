@@ -1,8 +1,9 @@
-/* body {margin: 0;padding: 0;} */
 body {
-  /* display: block; */
+  margin: 0;
+  padding: 0;
+  display: block;
 }
-        /* for task #3 */
+/* for task #3 */
 ul {
   display: flex;
   padding: 0;
@@ -11,12 +12,11 @@ ul {
   list-style: none;
 }
 img {
-  /* display: block; */
-  outline: 1px solid red;
+  outline: 1px dotted white;
 }
-        /* for task #6 */
+/* for task #6 */
 #validation-input {
-  border: 3px solid #bdbdbd;
+  border: 3px solid #f44336; /* #bdbdbd; */
 }
 
 #validation-input.valid {
@@ -25,4 +25,8 @@ img {
 
 #validation-input.invalid {
   border-color: #f44336;
+}
+/* for task #8 */
+div {
+  display: inline-block;
 }

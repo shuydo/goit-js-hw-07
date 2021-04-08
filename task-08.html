@@ -1,37 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Задание 8</title>
-    <style>
-        div {
-            display: inline-block;
-        }
+  </head>
 
-        #boxes {
-            display: block;
-            margin: 0;
-            padding: 2px 0 0 0;
-        }
-    </style>
-</head>
-
-<body>
+  <body>
     <p><a href="index.htm">На главную</a></p>
 
     <div id="controls">
-        <input type="number" min="0" max="100" step="1" />
-        <button type="button" data-action="render">Создать</button>
-        <button type="button" data-action="destroy">Очистить</button>
+      <input type="number" min="0" max="100" step="1" />
+      <button type="button" data-action="render">Создать</button>
+      <button type="button" data-action="destroy">Очистить</button>
     </div>
 
     <div id="boxes"></div>
 
     <script src="./js/08.js" type="module"></script>
-
-</body>
-
+  </body>
 </html>
